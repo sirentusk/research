@@ -1,0 +1,493 @@
+/* Reset and Base Styles */
+/* Reset default browser styles. */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    scrollbar-color: #F9E5C2 #BC642E; /* For Gecko browsers */
+    scrollbar-width: thin; /* For Gecko browsers */
+}
+
+html::-webkit-scrollbar-track { /* Chromium */
+    background: rgb(85, 93, 95);
+    box-shadow: inset 1px 1px 5px black ;
+}
+  
+html::-webkit-scrollbar, /* Chromium */
+html::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(0deg, #f38e5f, #F9E5C2);
+    border-radius: 20px;
+    width: 10px;
+}
+
+body {
+    font-family: Arial, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    background-image: url('images/Border.png'), linear-gradient(to right, #ffdebf, #f38e5f, rgb(85, 93, 95), rgb(85, 93, 95), rgb(85, 93, 95), #f38e5f, #ffdebf);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left bottom;
+    background-size: auto 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Typography */
+/* For defining global font styles. */
+
+@font-face {
+	font-family: 'SmartFrocks';
+	src: url('font/SmartFrocks.ttf');
+	font-style: normal;
+}
+
+h1 {
+	font-family: 'SmartFrocks', fantasy;
+    font-size: calc(65px + 1vw);
+    background: linear-gradient(45deg,  #F9E5C2, #f38e5f, white, #f38e5f, #F9E5C2);
+    -webkit-background-clip: text; /* Chromium */
+    -moz-background-clip: text; /* Gecko */
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #F9E5C2;
+    text-underline-offset: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #F9E5C2;
+    font-weight: bold;
+    padding: 35px 25px 45px 25px;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.descriptionleft {
+    width: 30%;
+    line-height: 1.5;
+    text-align: left;
+    margin-left: 50px;
+}
+
+
+.descriptionright {
+    width: 30%;
+    line-height: 1.5;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.quoteleft {
+    text-align: left;
+    width: 40%;
+    line-height: 1.5;
+    margin-left: 50px;
+    background: rgb(30, 30, 30);
+    padding: 30px 40px 30px 40px;
+    border-radius: 80px;
+}
+
+.quoteright {
+    text-align: right;
+    width: 40%;
+    line-height: 1.5;
+    margin-right: 50px;
+    background: rgb(30, 30, 30);
+    padding: 30px 40px 30px 40px;
+    border-radius: 80px;
+}
+
+.description p {
+    color: white;
+}
+
+.descriptionleft .title, .descriptionright .title {
+    color: #4ED9CB;
+}
+
+details, summary {
+    color: white;
+}
+
+/* Colors and Themes */
+/* Defining color variables. */
+
+/* Custom Properties */
+/* Defining reusable CSS variables. */
+
+.pageleft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+}
+
+.pageright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    text-align: right;
+}
+
+.pageright p {
+    order: -1;
+}
+
+details.read {
+    position: relative;
+    padding: 5px 0;
+}
+
+details.read[open] > summary::after {
+    display: block;
+    content: "Close";
+    position: absolute; /* position within Details */
+    right: 10px;
+    bottom: 10px;
+    color: black;
+    background: white;
+    padding: 10px; /* clickable area */
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+/* Layout and Structure */
+/* Overall layout grid, wrappers, and structural elements. */
+
+/* Table Styles */
+/* Styles related table layout and formatting. */
+
+/* Navigation and Header */
+/* Styles specific to site navigation and header components. */
+
+/* Components and Modules */
+/* Reusable components like buttons, cards, modals, etc. */
+
+.circleleft {
+    float: left;
+    display: block;
+    padding: 10px;
+    margin: 30px;
+    width: 300px;
+    height: 300px;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    background: black;
+    position: relative;
+    z-index: 1;
+}
+
+.circleright {
+    float: right;
+    display: block;
+    padding: 10px;
+    margin: 30px;
+    width: 300px;
+    height: 300px;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    background: black;
+    position: relative;
+    z-index: 1;
+}
+
+.circleminileft {
+    float: left;
+    display: block;
+    padding: 10px;
+    margin: 30px;
+    width: 150px;
+    height: 150px;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    background: black;
+    position: relative;
+    z-index: 1;
+}
+
+.circleminiright {
+    float: right;
+    display: block;
+    padding: 10px;
+    margin: 30px;
+    width: 150px;
+    height: 150px;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    background: black;
+    position: relative;
+    z-index: 1;
+}
+
+.circleleft::after, .circleright::after, .circleminileft::after, .circleminiright::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #BC642E, #F9E5C2, #000000);
+    clip-path: circle(50% at 50% 50%);
+}
+
+.circleleft img, .circleright img, .circleminileft img, .circleminiright img {
+    width:calc(100%);
+    filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.5));
+}
+
+/* Forms and Inputs */
+/* Styling form elements and input fields. */
+
+.toggle { /* Hides the checkbox under the open/close icons */
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    margin-right: 25px;
+    opacity: 0;
+}
+
+/* Imagery and Videos */
+/* Styles related to images, videos and icons. */
+
+.open, .close { /* Position icons */
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: 0;
+    right: 0;
+    padding: 25px;
+}
+
+p img {
+    width: 200px;
+    height: auto;
+}
+
+/* Utilities and Helpers */
+/* Small reusable classes with a single purpose or function */
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  line-height: 1;
+  font-size: .9em;
+  pointer-events: none;
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  opacity: 0;
+  filter: drop-shadow(2px 2px 1px #000000);
+}
+
+[data-tooltip]:before {
+  content: "";
+  border: 5px solid transparent;
+  z-index: 100;
+}
+
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  text-align: center;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 6px 8px;
+  border-radius: 3px;
+  background: #FFC403;
+  color: #FFFFFF;
+  z-index: 99;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  display: block;
+  opacity: 1;
+}
+
+[data-tooltip]:not([data-flow])::before,
+[data-tooltip][data-flow="top"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #FFC403;
+}
+
+[data-tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::after {
+  bottom: calc(100% + 5px);
+}
+
+[data-tooltip]:not([data-flow])::before, [tooltip]:not([data-flow])::after,
+[data-tooltip][data-flow="top"]::before,
+[data-tooltip][data-flow="top"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, -4px);
+          transform: translate(-50%, -4px);
+}
+
+[data-tooltip][data-flow="bottom"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #FFC403;
+}
+
+[data-tooltip][data-flow="bottom"]::after {
+  top: calc(100% + 5px);
+}
+
+[data-tooltip][data-flow="bottom"]::before, [data-tooltip][data-flow="bottom"]::after {
+  left: 50%;
+  -webkit-transform: translate(-50%, 8px);
+          transform: translate(-50%, 8px);
+}
+
+[data-tooltip][data-flow="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #FFC403;
+  left: calc(0em - 5px);
+  -webkit-transform: translate(-8px, -50%);
+          transform: translate(-8px, -50%);
+}
+
+[data-tooltip][data-flow="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  -webkit-transform: translate(-8px, -50%);
+          transform: translate(-8px, -50%);
+}
+
+[data-tooltip][data-flow="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #FFC403;
+  right: calc(0em - 5px);
+  -webkit-transform: translate(8px, -50%);
+          transform: translate(8px, -50%);
+}
+
+[data-tooltip][data-flow="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  -webkit-transform: translate(8px, -50%);
+          transform: translate(8px, -50%);
+}
+
+[data-tooltip=""]::after, [data-tooltip=""]::before {
+  display: none !important;
+}
+
+
+/* Accessibility Enhancements */
+/* Improve accessibility like focus states and screen reader-only text. */
+
+/* Responsive Styles */
+/* Media queries and styles that target different screen sizes and devices. */
+
+@media (max-width: 610px) { /* Hide toolbar on mobile */
+    .menu {
+        position: fixed;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-flow: wrap;
+        height: 95vh;
+        z-index: 1;
+        width: 400px;
+        right: -400px;
+        top: 0;
+        padding: 100px;
+        background: rgb(0, 127, 99);
+        text-shadow: 2px 2px 2px black;
+        transition: all 0.3s ease-in-out;
+        border-radius: 100px 0px 0px 100px;
+        box-shadow: 5px -5px 0px 0px #fff inset;
+    }
+
+    .open, .close { /* Position icons */
+        cursor: pointer;
+        content: "";
+        position: absolute;
+        height: 4px;
+        top: 0;
+        right: 0;
+        padding: 35px;
+        overflow: hidden;
+    }
+
+    .open, .close { /* When mobile menu loads */
+        display: block;
+    }
+
+    .toggle:checked ~ .menu { /* Remove right: -400px; which makes it pan in/show */
+        right: 0;
+    }
+}
+
+@media (min-width: 610px) { /* Hide open icon on mobile */
+    .close {
+        display: none;
+    }
+}
+
+
+/* State Styles */
+/* Pseudo-classes and interactive states like :hover, :focus, etc. */
+
+header a:hover {
+    box-shadow: 0 -5px 0px #fff inset,
+    500px 0 0 rgba(255,255,255,0.03) inset;
+    padding: 35px 25px 45px 25px;
+}
+
+/* Animations and Keyframes */
+/* Defining CSS animations and keyframes. */
+
+/* Cross-Browser Compatibility */
+/* Styling across different browsers. */
+
+/* Footers */
+/* Styles specific to the footer section. */
+
+footer {
+    padding-top: 200px;
+    padding-bottom: 50px;
+    line-height: 3;
+    text-align: center;
+    color: white;
+}
+
+/* Print Styles */
+/* Styles that apply when the document is printed. */
+
